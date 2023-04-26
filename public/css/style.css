@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #455B9C;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.row {
+    margin-bottom: 0;
+}
+#logado{
+    display: none;
+}
+.nav-wrapper .logoMenu{
+    width: 145px;
+}
+
+.bloco-home {
+    width: min(1920px, 100%);
+    margin-inline: auto;
+    padding-inline: 24px;
+    height: 65vh;
+}
+
+.bloco {
+    width: min(1920px, 100%);
+    margin-inline: auto;
+    padding-inline: 24px;
+    height: 100%;
+}
+
+/***** MENU *****/
+
+nav {
+    background-color: #2A438C;
+    height: 70px;
+}
+
+nav .logoMenu {
+    margin-left: 30px;
+}
+nav ul .btn {
+    background-color: #F23E16;
+    border-radius: 30px;
+}
+
+nav ul .btn:hover {
+    background-color: #da4828;
+}
+
+.side-nav {
+    background-color: #2A438C;
+}
+
+.side-nav li>a {
+    color: #fff;
+}
+#dropdown2 li>a {
+	color:white;
+}
+.side-nav .btn {
+    background-color: #F23E16;
+    border-radius: 30px;
+}
+
+.side-nav li>a.btn:hover {
+    background-color: #da4828; 
+}
+
+.side-nav .dropdown-content {
+    background-color: #2A438C;
+}
+
+.side-nav .dropdown-content li:hover {
+    background-color: #da4828;
+    color: white;
+}
+
+/***** HOME *****/
+#home {
+    background: linear-gradient(180deg,#a2aed4 -0%, #132C83 15%, #2A438C 80%);
+    padding-top: 70px;
+}
+
+.card-apresentacao {
+    color: #fff;
+    
+}
+
+.card-apresentacao h1 {
+	font-size: 52px;
+    margin: 3rem 0;
+    font-weight: 700;
+}
+
+.card-robo {
+    padding: 17px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#servicos{
+    margin-top: 20px;
+}
+
+/***** PRODUTO *****/
+
+#produto {
+	
+    padding-top: 5px;
+    
+    height: 80vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+}
+#produto{
+    background: linear-gradient(180deg, #2A438C 0%,#132C83 90%,  #455B9C 100%);
+}
+
+#produto h1 {
+	font-size: 52px;
+    margin: 3rem 0;
+    margin-top: 100px;
+    font-weight: 500;
+	color:#fff;
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #1B3C93;
+    color: white;
+    padding: 1.5rem 1.7rem;
+    border-radius: 10px;
+    max-height: 468px;
+    margin-left: 0px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 75px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 20px;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card button {
+    background: #F34E15;
+}
+
+main.cards section.card button:hover {
+    background: #f2754c;
+}
+
+main.cards section.card {
+    box-shadow: 0.5px 0.5px 3px 1px white;
+}
+#produto a {
+    text-decoration: none;
+    color: white;
+}
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100% ;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.288);
+    max-height: 100% !important;
+    font-size: 20px;
+    z-index: 2 ;
+}
+
+.modal-content {
+    background-color:#455b9cef;
+    margin: 15% auto;
+    padding: 20px;
+    width: 45%;
+    border: #132C83 1px solid;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+}
+.email-popup{
+    margin-top: 15px !important;
+    border: 1px solid white !important;
+    border-radius: 5px !important;
+    width: 300px !important;
+    padding-left: 10px !important;
+    color: grey;
+    background-color: white !important;
+    
+  }
+.email-popup::placeholder{
+    color: grey;
+}
+.popup-enviar{
+    color: white;
+    border-radius: 10px;
+    background-color: #F34E15;
+    width: 80px !important;
+    height: 30px !important;
+    border: 0 !important;
+}
+.popup-enviar:hover{
+    background-color: #f2754c;
+    color: white;
+}
+
+.close, .close2, .close3, .close4, .close6 {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close2:hover, .close3:hover, .close4:hover, .close:focus, .close2:focus, .close3:focus, .close4:focus  {
+  color:gray;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/***** O que é eAi? *****/
+
+.card-eai {
+    color: white;
+    
+}
+
+.card-eai h2 {
+	font-size: 52px;
+    margin: 3rem 0;
+    font-weight: 700;
+    text-align: right;
+    margin-top: 20%;
+}
+
+.card-eai h5 {
+    margin: 3rem 0;
+    font-weight: 400;
+    text-align: right;
+    margin-top: 05%;
+}
+
+.robo {
+    padding: 20px;
+    margin-top: 0%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** Video *****/
+
+
+
+.video{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+
+.video img {
+    width: 36%;
+    margin-top: 0;
+    padding-top: 0;
+}
+.robo2 {
+    padding: 20px;
+    margin-top: -10%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content:right;
+    align-items:center;
+}
+
+/***** DEPOIMENTOS *****/
+
+#depoimentos{
+    padding-top:60px ;
+    padding-bottom: 70px;
+    margin-top: 20px;
+    background: linear-gradient(180deg, #455B9C 0%,#132C83 70%);
+}
+.frasedepoimento .center{
+    margin-bottom: 80px;
+}
+.frasedepoimento, p{
+    color: #fff;
+}
+.areadepoimento{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.depoimento{
+    background: #1B3C93;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px 0 20px;
+    width: 600px;  
+    margin-bottom: 2px;
+    margin-left: 20px;
+    margin-right: 20px; 
+    box-shadow: 0.5px 0.5px 3px 1px white;
+}
+.depoimento:last-child{
+    margin-left: 0;
+}
+.depoimento img{
+    width: 130px;
+    margin-top: 10px;
+    padding: 30px 0 0 0;
+}
+
+/***** ASSINATURAS *****/
+.assinaturas{
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background: linear-gradient(180deg, #132C83  1%, #2A438C 10%,  #455B9C 100%);
+}
+.assinatura{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-assinatura h1{
+   align-items: center;
+   text-align: center;
+   color: white;
+   margin-bottom: 50px;
+}
+
+.texto-assinatura{
+    font-size: 13px;
+    margin: 12px 15px;
+    
+}
+.eai{
+    font-size: 20px;
+}
+.ponto{
+    color: #da4828;
+}
+.desconto-assinatura{
+    color: white;
+    text-align: center;
+    
+}
+
+.assinatura-trimestral h4, .assinatura-semestral h4 , .assinatura-anual h4{
+    color: #E1845C;
+    text-transform: uppercase;
+}
+.assinatura-trimestral {
+    width: 250px;
+    padding-top: 10px;
+    height: 450px;
+    background-color: #1B3C93;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0.5px 0.5px 3px 1px white;
+    text-align: center;
+}
+.assinatura-anual {
+    width: 300px;
+    padding-top: 10px;
+    height: 500px;
+    background-color: #1B3C93;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0.5px 0.5px 3px 1px white;
+    text-align: center;
+    z-index: 1;
+} 
+.assinatura-anual .anual{
+    padding-top: 20px;
+}
+.assinatura-semestral {
+    width: 250px;
+    padding-top: 10px;
+    height: 450px;
+    background-color: #1B3C93;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0.5px 0.5px 3px 1px white;
+    text-align: center;
+}
+
+.botao-tri{
+    margin-top:15px ;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+.botao-tri:focus, .botao-se:focus {
+    background-color: white;
+}
+.botao-anual:focus{
+    background-color: #da4828;
+}
+.botao-anual{
+    margin-top:15px ;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    background: #da4828;
+    color: white;
+}
+.botao-se{
+    margin-top:15px ;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+.botao-tri:hover, .botao-se:hover {
+    background-color: #e0dfdf;
+}
+.botao-anual:hover{
+    background-color:#F34E15;
+}
+.modal1, .modal2, .modal3{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100% ;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.288);
+    max-height: 100% !important;
+    font-size: 20px; 
+    z-index:2 ;
+}
+
+.modal1-content{
+    background-color:#13379E;
+    margin: 11% auto;
+    padding: 10px ;
+    width: 70%;
+    height: 800px;
+    min-height: 500px;
+    box-shadow: 0.5px 0.5px 3px 1px white;;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    height: 51%;
+}
+.promocao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.promocoes{
+    background-color: white;
+    width: 350px;
+    height: 125px;
+    margin: 0;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.assinatura-frase{
+    color: #E1845C ;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.plano-trimestral .assinatura-frase, .plano-trimestral .frase-impacto{
+    margin-top: 20px;
+}
+.plano-trimestral .promocao{
+    margin: 20px;
+    margin-bottom: 20px;
+}
+.plano-trimestral .assinatura-frase{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.promocoes i{
+    color: black;
+    font-size: 40px;
+    width: 100%;
+}
+.assine-ja{
+    border: 0;
+    color: white;
+    background-color: #da4828;
+    border-radius: 10px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.assine-ja:hover{
+    background-color: #F23E16;
+    color: rgb(236, 234, 234);
+}
+.assine-ja:focus{
+    background-color: #da4828;
+}
+.alinhando{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%;
+}
+.icone i{
+    margin-left: 10px;
+}
+.texto-promocao p{
+    color: black;
+    font-size: 18px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+/***** FOOTER *****/
+
+.page-footer {
+    background-color: #2A438C;
+}
+
+footer .endereco {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+footer .redes-sociais {
+	display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+	gap: 30px;
+}
+
+footer .redes-sociais ul {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer .redes-sociais ul a {
+    font-size: 2rem;
+}
+
+footer .app {
+	flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+}
+
+footer .link-app ul {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 50px;
+}
+	
+footer .link-app ul li a{
+	font-size: 2rem;
+}
+	
+footer .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+footer .copyright img{
+    width: 100px;
+}
+
+@media only screen and (max-width: 601px) {
+    .bloco {
+        height: 100%;
+    }
+	
+	.bloco-home {
+		height: 100%;
+	}
+
+    /***** HOME *****/
+    #home {
+        padding-top: 0;
+    }
+    .card-apresentacao h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+	/***** PRODUTO *****/
+	
+	#produto h1 {
+		font-size: 25px;
+	}
+	
+	#produto {
+		
+		height: max-content;
+	}
+    .modal-content {
+        width: 70%;
+    }
+    .email-popup{
+        width: 250px !important;
+    }
+
+    
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+    padding-top: 0%;
+    }
+    .card-eai h2 {
+        font-size: 2.5rem;
+    }
+    
+    .card-eai h5 {
+        font-size: 1.3rem;
+    }
+	
+    .robo img {
+        display: none;
+    }
+
+    .video{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .video img {
+        display: none;
+    }
+	
+    /***** PRODUTOS *****/
+
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+		margin-left: 0px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+	
+    /***** DEPOIMENTOS *****/
+
+    #depoimentos{
+        padding-top: 10px;
+    }
+    .depoimento{
+        margin-left: 0;
+    }
+    .frasedepoimento .center{
+        margin-top: 15px;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+    .areadepoimento{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .depoimento{
+        width: 350px;
+        margin-bottom: 45px;
+    } 
+    .depoimento img {
+        width: 90px;
+    }
+
+    /***** ASSINATURAS *****/
+
+    .assinaturas{
+        padding-top: 10px;
+        margin-top: 0;
+    }
+    .assinatura{
+        
+        flex-direction: column ;
+    }
+    .assinatura-trimestral,.assinatura-semestral, .assinatura-anual {
+        width: 350px;
+        padding-top: 10px;
+        height: 400px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .assinatura-anual .anual{
+        padding-top: 0;
+    }
+    .titulo-assinatura h1{
+        font-size: 35px;
+    }
+    
+
+	/***** FOOTER *****/
+	
+	footer .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin: 15px;
+	}
+    .endereco{
+        text-align: center;
+    }
+	
+	footer .redes-sociais ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+	}
+	
+	footer .app {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+        margin-top: 20px;
+	}
+	
+	footer .link-app ul li{
+		font-size: 3rem;
+	}
+	
+	footer .copyright {
+		font-size: 10px;
+	}
+    footer .copyright img{
+        width: 100px;
+    }
+    footer .redes-sociais h5{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 20px;
+    }
+    
+}
+
+
+
+@media only screen and (min-width: 602px) and (max-width: 991px) {
+    .bloco {
+        height: 100%;
+    }
+
+    .bloco-home {
+        height: 100%;
+    }
+
+    /***** HOME *****/
+    #home {
+        padding-top: 0;
+    }
+    .card-apresentacao h1 {
+        font-size: 3rem;
+    }
+    
+    .card-apresentacao h5 {
+        font-size: 1.5rem;
+		color: #2A438C;
+    }
+
+    /***** O que é eAi? *****/
+
+    #serviços{
+        padding-top: 0%;
+            }
+    .card-eai h2 {
+        font-size: 3rem;
+            }
+            
+    .card-eai h5 {
+        font-size: 1.5rem;
+            }
+    .video img {
+        display: none;
+    }
+    .video{
+        margin-bottom: 30px;
+    }
+
+    /***** PRODUTOS *****/		
+	
+    #produto {
+		
+		height: max-content;
+	}
+	
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+		margin-left: 0px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+	
+	main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+    .email-popup{
+        width: 270px !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /***** DEPOIMENTOS *****/
+    
+    #depoimentos{
+        padding-top: 10px;
+        padding-bottom: 50px;
+    }
+    .frasedepoimento .center{
+        margin-top: 15px;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+    .areadepoimento{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .depoimento{
+        width: 350px;
+        margin-bottom: 45px;
+        margin-right: 20px;
+        margin-left: 20px;
+        height: 400px;
+    }
+    .depoimento:last-child{
+        margin-left: 0;
+    }
+    .depoimento img {
+        margin-top: 25px;
+        padding-top: 0;
+        width: 90px;
+    }
+    /***** ASSINATURA *****/
+    .assinaturas{
+        padding-top: 20px;
+    }
+    .assinatura{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .titulo-assinatura h1{
+        font-size: 35px;
+    }
+    .assinatura h4{
+        font-size: 25px;
+    }
+    .texto-assinatura {
+        font-size: 12px;
+    }
+    .assinatura button{
+        margin-top: 10px;
+        
+    }
+    
+     
+
+	/***** FOOTER *****/	
+	
+	footer .redes-sociais ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+	}
+
+}    
